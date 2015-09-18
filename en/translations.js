@@ -1,5 +1,6 @@
 {
   'general': {
+    'total': 'Total',
     'locations': 'Locations',
     'export_and_import': 'Products',
     'industries': 'Industries',
@@ -54,16 +55,17 @@
     'location_q2': 'What products have the most potential in Antioquia?',
     'industry_head': 'Learn about an industry',
     'industry_q1': 'Where in Colombia does the insurance industry employ the most people?',
-    'industry_q2': 'What are the skills needed by the chemical industry?',
+    'industry_q2': 'What occupations does the chemical industry employ?',
     'product_head': 'Learn about an export',
     'product_q1': 'What places in Colombia export bananas?',
     'product_q2': 'What places in Colombia import computers?',
     'colombia_profile': 'Read the profile for Colombia'
   },
   'location.model':{
+    'country': 'Colombia',
     'department': 'department',
     'municipality': 'municipality',
-    'population_center': 'population center'
+    'msa': 'city',
   },
   'ctas': {
     'export': 'Export',
@@ -87,13 +89,10 @@
     'thead_muni': 'Municipalities',
     'trade_head': 'Trade data (DIAN)',
     'trade_copy': 'The source of all data on exports and imports by department and municipality is DIAN’s Customs Data (DIAN is the National Tax and Customs Authority). It may not correspond to official export/import data because some transactions were not included due to lack of information on the industry of the exporter and/or the municipality or department of origin (or destination) of the export (or import). Colombian Customs data use a modified version of the Harmonized System (HS) classification, which is compatible with the International Standard Industrial Classification of All Economic Activities (ISIC).',
-    'trade_row_1': 'Export values (2008–2013)',
-    'trade_row_2': 'Import values (2008–2013)',
-    'trade_row_3': 'Export complexity',
+    'trade_row_1': 'Exports, imports and complexity (2008–2013)',
     'industry_head': 'Industry data (PILA)',
     'industry_copy': 'PILA (the Integrated Report of Social Security Contributions), managed by the Ministry of Health) is the main source of industry data. It contains information on formal employment, wages and number of firms by municipality and industry. Colombia’s industry classification is a modified version of the International Standard Industrial Classification of All Economic Activities (ISIC).',
-    'industry_row_1': 'Employment, wages and number of firms (2008–2013)',
-    'industry_row_2': 'Industry complexity',
+    'industry_row_1': 'Employment, wages, firms and complexity (2008–2013)',
     'occupations_head': 'Occupations data',
     'occupations_copy': 'All data on occupations (entry wage levels by occupation and location, and occupational structure by industry) come from job vacancy announcements placed by firms in public and private Internet job sites during 2014. Occupations are classified according to the Occupational Information Network Numerical Index (ONET). The data were processed by Jeisson Arley Cárdenas Rubio, researcher of Universidad del Rosario, Bogotá, and Jaime Mauricio Montaña Doncel, Masters student at the Paris School of Economics.',
     'occupations_row_1': 'Job vacancies and entry wages (2014)',
@@ -102,13 +101,22 @@
     'other_row_1': 'GDP and demographic variables'
   },
   'search': {
-    'header': 'Results',
+    'header': 'results',
     'intro': 'Search for the location, product, industry or occupation that you’re interested in.',
     'placeholder': 'Type here to search',
     'results_products': 'Products',
     'results_locations': 'Locations',
     'results_industries': 'Industries',
-    'didnt_find': 'Didn’t find what you were looking for? Let us know: eduardo_lora@hks.harvard.edu'
+    'didnt_find': 'Didn’t find what you were looking for? Let us know: eduardo_lora@hks.harvard.edu',
+    'level': {
+      'country': 'Country',
+      'department': 'Department',
+      'municipality': 'Municipality',
+      'msa': 'City',
+      '4digit': 'HS 4-Digit',
+      'division': 'ISIC 2-Digit',
+      'class': 'ISIC 4-Digit'
+    }
   },
   'graph_builder': {
     'view_more': 'View more',
@@ -134,10 +142,10 @@
       'cog': 'Opportunity gain',
       'employment': 'Employment',
       'num_vacancies': 'Vacancies',
-      'wages': 'Total wages, COP (in thousands)',
-      'monthly_wages': 'Avg. monthly wage, COP',
-      'avg_wage': 'Avg. wage, COP (in thousands)',
-      'average_wages': 'Avg. wage, COP (in thousands)',
+      'wages': 'Total wages, Col$ (in thousands)',
+      'monthly_wages': 'Avg. monthly wage, Col$',
+      'avg_wage': 'Avg. wage, Col$ (in thousands)',
+      'average_wages': 'Avg. wage, Col$ (in thousands)',
       'employment_growth': 'Employment growth (2008-2012)',
       'num_establishments': 'Firms',
       'export_num_plants': 'Firms',
@@ -158,6 +166,12 @@
     },
     'change_graph': {
       'label': 'Graphs',
+      'multiples_description': 'Compare growth over time',
+      'treemap_description': 'See composition at different levels',
+      'geo_description': 'Map the data',
+      'scatter_description': 'Plot complexity and distance',
+      'similarity_description': 'Analyze revealed comparative advantages',
+      'unavailable': 'Graph is unavailable for this question'
     },
     'questions': {
       'label': 'Change question'
@@ -167,38 +181,38 @@
     },
     'page_title': {
       'industry': {
-        'departments.employment': 'Where in Colombia does {{name}} employ the most people?',
-        'departments.wages': 'Where in Colombia does {{name}} pay the highest total wages?',
-        'occupations.num_vacancies': 'What occupations are demanded by {{name}}?'
+        'departments.employment': 'Where in Colombia does this industry employ the most people?',
+        'departments.wages': 'Where in Colombia does this industry pay the highest total wages?',
+        'occupations.num_vacancies': 'What occupations does this industry employ?'
       },
       'product': {
-        'locations.export_value': 'What places in Colombia export {{name}}?',
-        'locations.import_value': 'What places in Colombia import {{name}}?',
+        'locations.export_value': 'What places in Colombia export this product?',
+        'locations.import_value': 'What places in Colombia import this product?',
       },
       'location': {
-        'locations.export': 'What countries does {{name}} export to?',
-        'locations.export_to': 'What countries does {{name}} export {{item}} to?',
-        'locations.import_from': 'What countries does {{name}} import from?',
-        'locations.import_product_from': 'What countries does {{name}} import {{item}} from?',
-        'locations.export_subregions': 'What subregions contribute to the exports from {{name}}?',
-        'locations.export_subregions_products': 'What subregions contribute to the exports of {{item}} from {{name}}?',
-        'locations.export_subregions_locations':'What subregions contribute to the exports from {{name}} to {{place}}?',
-        'locations.export_subregions_products_locations':' What subregions contribute to the exports of {{item}} from {{name}} to {{place}}?',
-        'locations.import_subregions': 'What subregions contribute to the imports for {{name}}?',
-        'locations.import_subregions_products': 'What subregions contribute to the imports of {{item}} for {{name}}?',
-        'locations.import_subregions_locations': 'What subregions contribute to the imports for {{name}} from {{place}}?',
-        'locations.import_subregions_products_locations': 'What subregions contribute to the imports of {{item}} for {{name}} from {{place}}?',
-        'products.export_value': 'What products does {{name}} export?',
-        'products.scatter': 'What products have the most potential for {{name}}?',
-        'products.export_value_to': 'What products does {{name}} export to {{place}}?',
-        'products.import_value': 'What products does {{name}} import?',
-        'products.import_value_from': 'What products does {{name}} import from {{place}}?',
-        'products.similarity': 'What does the product space look like for {{name}}?',
-        'industries.employment': 'What industries in {{name}} employ the most people?',
-        'industries.scatter': 'What industries have the most potential for {{name}}?',
-        'industries.wages': 'What industries in {{name}} are the largest by total wages?',
-        'industries.wages_avg': 'What industries in {{name}} have the highest wages per worker?',
-        'industries.similarity': 'What does the industry space look like for {{name}}?'
+        'locations.export': 'What countries does {{thisLevel}} export to?',
+        'locations.export_to': 'What countries does {{thisLevel}} export {{item}} to?',
+        'locations.import_from': 'What countries does {{thisLevel}} import from?',
+        'locations.import_product_from': 'What countries does {{thisLevel}} import {{item}} from?',
+        'locations.export_subregions': 'What subregions contribute to the exports from {{thisLevel}}?',
+        'locations.export_subregions_products': 'What subregions contribute to the exports of {{item}} from {{thisLevel}}?',
+        'locations.export_subregions_locations':'What subregions contribute to the exports from {{thisLevel}} to {{place}}?',
+        'locations.export_subregions_products_locations':' What subregions contribute to the exports of {{item}} from {{thisLevel}} to {{place}}?',
+        'locations.import_subregions': 'What subregions contribute to the imports for {{thisLevel}}?',
+        'locations.import_subregions_products': 'What subregions contribute to the imports of {{item}} for {{thisLevel}}?',
+        'locations.import_subregions_locations': 'What subregions contribute to the imports for {{thisLevel}} from {{place}}?',
+        'locations.import_subregions_products_locations': 'What subregions contribute to the imports of {{item}} for {{thisLevel}} from {{place}}?',
+        'products.export_value': 'What products does {{thisLevel}} export?',
+        'products.scatter': 'What products have the most potential for {{thisLevel}}?',
+        'products.export_value_to': 'What products does {{thisLevel}} export to {{place}}?',
+        'products.import_value': 'What products does {{thisLevel}} import?',
+        'products.import_value_from': 'What products does {{thisLevel}} import from {{place}}?',
+        'products.similarity': 'What does the product space look like for {{thisLevel}}?',
+        'industries.employment': 'What industries in {{thisLevel}} employ the most people?',
+        'industries.scatter': 'What industries have the most potential for {{thisLevel}}?',
+        'industries.wages': 'What industries in {{thisLevel}} are the largest by total wages?',
+        'industries.wages_avg': 'What industries in {{thisLevel}} have the highest wages per worker?',
+        'industries.similarity': 'What does the industry space look like for {{thisLevel}}?'
       }
     },
     'builder_nav': {
@@ -211,11 +225,11 @@
     'builder_mod_header': {
       'industry': {
         'departments.employment': 'Total employment',
-        'departments.wages': 'Total wages, COP',
-        'departments.wage_avg': 'Average wages, COP',
+        'departments.wages': 'Total wages, Col$',
+        'departments.wage_avg': 'Average wages, Col$',
         'locations.employment': 'Total employment',
-        'locations.wages': 'Total wages, COP',
-        'locations.wage_avg': 'Average wages, COP',
+        'locations.wages': 'Total wages, Col$',
+        'locations.wage_avg': 'Average wages, Col$',
         'occupations.num_vacancies': 'Total vacancies'
       },
       'product': {
@@ -236,9 +250,9 @@
   },
   'location.show': {
     'overview': 'Overview',
-    'bullet.gdp_grow_rate': 'The GDP growth rate between {{yearRange}} was {{gdpGrowth}}',
-    'bullet.gdp_pc': '{{name}} has a GDP per capita of {{lastGdpPerCapita}}',
-    'bullet.last_pop': 'The population is {{lastPop}}',
+    'bullet.gdp_grow_rate': 'The GDP growth rate between {{yearRange}} was {{gdpGrowth}}, compared to 5.3% for Colombia',
+    'bullet.gdp_pc': '{{name}} has a GDP per capita of {{lastGdpPerCapita}}, compared to Col$15.1 M for Colombia',
+    'bullet.last_pop': 'The population is {{lastPop}} of Colombia\'s 45.8 M',
     'all_departments': 'Compared to the other departments',
     'value': 'Value',
     'growth_annual': 'Growth, annual ({{yearRange}})',
@@ -253,18 +267,44 @@
     'exports': 'Exports ({{year}})',
     'export_possiblities': 'Export possiblities',
     'export_possiblities.intro': 'We’ve found that countries which export complex products grow faster than those which export simple products. Using the similarity space we built in the section above, we’ve highlighted  high potential products for {{name}}, ranked by which have the highest combination of opportunity and complexity.',
-    'export_possiblities.footer': 'Note that the list is dynamically generated.  Not all exports may make sense given local conditions not captured in our measure of product similarity.'
+    'export_possiblities.footer': 'Note that the list is dynamically generated.  Not all exports may make sense given local conditions not captured in our measure of product similarity.',
+  },
+  'country.show': {
+    'dotplot-column': 'Departments Across Colombia',
+    'total': 'Total',
+    'gdp': 'Col $15,864,953',
+    'gdp_per_capita':' Col $756,152',
+    'population': '48.1 million',
+    'economic_structure': 'Economic Structure',
+    'economic_structure.copy.p1': 'With a population of 48.1 million (as of May 2015), Colombia is the third largest country in Latin America. Its total GDP in 2014 was Col$756,152 billion, or US$377.9 billion at the average exchange rate (1 US dollar = 2000.6 Colombian pesos). In 2014, income per capita reached Col$15,864,953 or US$7,930. Yearly economic growth since 2008 has averaged 4.3% (or 3.1% in per capita terms).',
+    'economic_structure.copy.p2': 'Business and financial services contribute 18.8% of GDP, making it the largest industry, followed by governmental, communal and personal services (16.5%) and manufacturing activities (11.2%). Bogotá D.C., Antioquia and Valle del Cauca represent nearly half of economic activity, contributing 24.7, 13.1 and 9.2% to total GDP, respectively. However, two oil-producing departments – Casanare and Meta – boast the highest GDP per capita. The following graphs provide more details.',
+    'employment_wage_occupation': 'Formal Employment, Occupations and Wages',
+    'employment_wage_occupation.copy.p1': 'In 2014, approximately 21.6 million Colombians were occupied in either a formal or an informal job, increasing slightly over 2013, at 21.1 million. The registries of the PILA, which cover the universe of workers who make contributions to the social security system, indicate that 13.3 million workers were occupied for some period in a formal job in 2013. Taking into account the number of months occupied, the effective number of year-round workers in the formal sector in 2013 was 6.7 million. Bogotá DC, Antioquia and Valle del Cauca generate, respectively 32.7, 16.7, and 10.7% of (effective) formal employment.',
+    'employment_wage_occupation.copy.p2': 'The following graphs present more detailed information on the patterns of formal employment and wages paid based on PILA. Also included is data on vacancies announced and wages offered by occupation, computed from job announcements placed by firms on internet sites in 2014.',
+    'industry_complex': 'Industry complexity',
+    'industry_complex.copy.p1': 'Industry complexity is a measure of the range of capabilities, skills or know-how required by an industry. Industries such as chemicals and machinery are said to be highly complex, because they require a sophisticated level of productive knowledge likely to be present only in large organizations where a number of highly specialized individuals interact. Conversely, industries such as retail trade or restaurants require only a basic level of know-how which may be found at a family-run business. More complex industries pay higher salaries and contribute to raising productivity and income per- capita. Departments and cities with more complex industries have a more diversified industrial base and tend to create more formal employment.',
+    'industry_complex.copy.p2':'The industry ‘Technological Similarity Space’ shown below is a graphical representation of the similarity between the capabilities and know-how required by pairs of industries. Each dot or node represents an industry; nodes connected by lines require similar capabilities. More connected industries use capabilities that can be deployed in many other industries. Colors represent industry groupings.',
+    'industry_space': 'Industry Space',
+    'exports': 'Exports',
+    'exports_composition_by_products': 'Export Composition by Product ({{year}})',
+    'exports_composition_by_department': 'Export Composition by Department ({{year}})',
+    'product_space': 'Product Space',
+    'exports.copy.p1': 'Colombia exported US$54.8 billion dollars in 2014, down from $58.8 billion in 2013 and $60.1 billion in 2012. Its main export partners are the United States, Venezuela, Ecuador and Peru. In 2014, mining products (of which oil, coal and nickel are the largest items) comprised 59.3% of total merchandise exports, manufactured goods contributed 35.6%, and agricultural products totaled 4.6% of exports. The following graphs provide further details.',
+    'export_complexity_possibilities': 'Export Complexity and Possibilities',
+    'export_complexity_possibilities.copy.p1': 'The concept of export complexity is similar to that of industry complexity introduced above. It has been found that countries that export products that are relatively complex for their level of economic development tend to grow faster than countries that export relatively simple products. Based on the complexity of its export basket in 2013, Colombia ranks 53rd among 124 countries and is predicted to grow at an annual rate of 3.3% in the period 2013-2023 based on its economic complexity.',
+    'export_complexity_possibilities.copy.p2': 'The highlighted nodes represent the products that Colombia exports in relatively large amounts (more precisely, with revealed comparative advantage higher than one, see the Glossary). Colors represent product groupings (which match the colors used in the industry technological space shown above). The figure further below and the accompanying table show what export products offer the best possibilities for Colombia, given the capabilities the country already has and how ‘distant’ are those capabilities to the ones needed for each product.',
+     'export_complexity_possibilities.copy.p3': ''
   },
   'industry.show': {
-    'employment_and_wages': 'Employment and Wages',
+    'employment_and_wages': 'Employment and wages',
     'industries': 'Industries',
     'value': 'Value',
-    'employment_growth': 'Employment Growth (2008-2013)',
-    'avg_wages': 'Average Wages ({{year}})',
+    'employment_growth': 'Employment growth (2008-2013)',
+    'avg_wages': 'Average wages ({{year}})',
     'employment': 'Employment ({{year}})',
-    'industry_composition': 'Industry Composition, 2013',
-    'occupation': 'Occupations Demanded by Industry',
-    'occupation_demand': 'Occupations most demanded, 2013'
+    'industry_composition': 'Industry composition, 2013',
+    'occupation': 'Occupations employed by industry',
+    'occupation_demand': 'Occupations employed, 2013'
   },
   'about': {
     'project_description_name': 'Project Description',
