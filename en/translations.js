@@ -130,6 +130,8 @@
   "graph_builder.page_title.location.products.similarity": "What does the product space look like for {{thisLevel}}?",
   "graph_builder.page_title.product.locations.export_value": "What places in Colombia export this product?",
   "graph_builder.page_title.product.locations.import_value": "What places in Colombia import this product?",
+  "graph_builder.page_title.product.cities.export_value": "What cities in Colombia export this product?",
+  "graph_builder.page_title.product.cities.import_value": "What cities in Colombia import this product?",
   "graph_builder.questions.label": "Change question",
   "graph_builder.recirc.header": "Read the profile for this {{entity}}",
   "graph_builder.search.placeholder": "Highlight {{entity}} on the graph below",
