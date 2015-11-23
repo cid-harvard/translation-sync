@@ -29,7 +29,7 @@
   "about.project_description_name": "About",
   "census_year": "2013",
   "country.show.dotplot-column": "Departments Across Colombia",
-  "country.show.eci": "",
+  "country.show.eci": "0.037",
   "country.show.economic_structure": "Economic Structure",
   "country.show.economic_structure.copy.p1": "With a population of 48.1 million (as of May 2015), Colombia is the third largest country in Latin America. Its total GDP in 2014 was Col$756.1 trillion, or US$377.9 billion at the average exchange rate of 2014 (1 US dollar = 2000.6 Colombian pesos). In 2014, income per capita reached Col$15,864,953 or US$7,930. Yearly economic growth since 2008 has averaged 4.3% (or 3.1% in per capita terms).",
   "country.show.economic_structure.copy.p2": "Business and financial services contribute 18.8% of GDP, making it the largest industry, followed by governmental, communal and personal services (16.5%) and manufacturing activities (11.2%). Bogot\u00e1 D.C., Antioquia and Valle del Cauca represent nearly half of economic activity, contributing 24.7, 13.1 and 9.2% to total GDP, respectively. However, two oil-producing departments \u2013 Casanare and Meta \u2013 boast the highest GDP per capita. The following graphs provide more details.",
