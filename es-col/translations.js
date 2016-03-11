@@ -1,4 +1,4 @@
-{
+export default {
   "abbr_billion": "mm",
   "abbr_million": "mill",
   "abbr_thousand": "miles",
@@ -463,4 +463,4 @@
   "search.results_products": "Productos",
   "table.export_data": "Descargar Datos",
   "thousands_delimiter": "."
-}
+};
