@@ -25,5 +25,4 @@ The CSV should be structured in a way where the there are three columns,
 
 currently only does english and spanish translations.
 
-
-For the subnational front-ends, move the `translation.js` to the corresponding dir.  They should match what it is here.  For the EMBER app, `export default` should be added before the json object.
+For the subnational front-ends, move the `translation.js` to the corresponding dir.  They should match what it is here.
