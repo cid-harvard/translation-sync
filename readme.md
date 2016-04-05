@@ -30,6 +30,6 @@ For the subnational front-ends, move the `translation.js` to the corresponding d
 Translation Sheet Links
 -----------------------
 
-- Peru: https://docs.google.com/spreadsheets/d/1opKsFJTqMiH1U-trha-ecdDwhJlJZ9Cqj_C4NBsC61s/edit?ts=56e30c61#gid=1198875237
-- Colombia: https://docs.google.com/spreadsheets/d/1fy27VLD3doGcI5TIAEU_x1l4BgSd761J5Y9n1BZHs0M/edit#gid=560993320
-- Mexico: ?
+- Peru: https://docs.google.com/spreadsheets/d/1opKsFJTqMiH1U-trha-ecdDwhJlJZ9Cqj_C4NBsC61s/
+- Colombia: https://docs.google.com/spreadsheets/d/1fy27VLD3doGcI5TIAEU_x1l4BgSd761J5Y9n1BZHs0M/
+- Mexico: https://docs.google.com/spreadsheets/d/1LcsgFkF6iz0Y9-KZCS9fZ6dME64y8Mc7JjQYgFDssGQ/
