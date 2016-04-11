@@ -306,7 +306,7 @@ export default {
   "graph_builder.table.industry": "Industry",
   "graph_builder.table.industry_eci": "Industry complexity",
   "graph_builder.table.less_than_5": "Less than 5",
-  "graph_builder.table.location": "Department",
+  "graph_builder.table.location": "Location",
   "graph_builder.table.monthly_wages": "",
   "graph_builder.table.name": "Name",
   "graph_builder.table.num_establishments": "Firms",
